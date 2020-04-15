@@ -201,7 +201,8 @@ class WooCommerce_Minimum_Age_Admin {
 	 */
 	public function check_birth_date($order_id) {
 		$dob = $_POST['billing_order_dob'];
-		$age = date_diff(date_create($dob), date_create('now'))->y;
+		$tz = new DateTimeZone(get_option('timezone_string'));
+		$age = DateTime::createFromFormat('Y-m-d', $dob, $tz)->diff(new DateTime('now', $tz))->y;
 		$min_age = get_option(woocommerce_minimum_age()::$plugin['option_prefix'].'minimum_age');
 
 		if (isset($dob) && !empty($dob)) {
