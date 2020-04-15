@@ -3,7 +3,7 @@
  * Plugin Name: WooCommerce Minimum Age
  * Plugin URI: http://wpsquadbox.com
  * Description: Add a required age field at checkout.
- * Version: 0.0.0
+ * Version: 1.0.0
  * Author: WP Squadbox
  * Author URI: http://wpsquadbox.com
  * Text Domain: woocommerce-minimum-age
@@ -21,7 +21,7 @@ class WooCommerce_Minimum_Age {
 
 	public static $plugin = array(
 		'name'          => 'WooCommerce Minimum Age',
-		'version'       => '0.0.0',
+		'version'       => '1.0.0',
 		'file'          => __FILE__,
 		'option_prefix' => 'woocommerce_minimum_age_',
 	);
